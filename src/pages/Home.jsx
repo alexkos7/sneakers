@@ -7,6 +7,7 @@ import { fetchSneakers } from "../components/redux/reducers/sneakersReducer";
 import Cards from "../components/Card/Cards";
 import Sort from "../components/Sort";
 
+
 const Home = () => {
   const [animate] = useAutoAnimate();
 
@@ -40,15 +41,18 @@ const Home = () => {
         </div>
         <Sort />
       </div>
-
-      <div className="cardsGroup" ref={animate}>
-        {items
-          .filter((obj) => {
-            return obj.title.toLowerCase().includes(searchValue.toLowerCase());
-          })
-          .map((obj) => (
-            <Cards key={obj.id} {...obj} />
-          ))}
+      <div className="container_card">
+        <div className="cardsGroup" ref={animate}>
+          {items
+            .filter((obj) => {
+              return obj.title
+                .toLowerCase()
+                .includes(searchValue.toLowerCase());
+            })
+            .map((obj) => (
+              <Cards key={obj.id} {...obj} />
+            ))}
+        </div>
       </div>
     </div>
   );

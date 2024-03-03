@@ -26,9 +26,8 @@ input:focus {
 .container {
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 20px;
-  max-width: 1820px;
-  margin: 20px auto;
+  max-width: 1920px;
+  margin: 0px auto;
   flex-shrink: 0;
 }
 
@@ -97,8 +96,12 @@ header {
 }
 
 .content {
-  padding: 20px;
-  margin: 0px 60px;
+  // padding: 20px;
+  // margin: 0px 60px;
+  // min-height: 870px;
+
+  padding: 20px 60px;
+  margin: 0px auto;
 
   .contentItems {
     justify-content: center;
@@ -123,8 +126,77 @@ header {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 50px;
     grid-row-gap: 25px;
+
+    @media (max-width: 1831px) {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 30px;
+    }
+
+    @media (max-width: 1755px) {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 10px;
+    }
+
+    @media (max-width: 1673px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 90px;
+    }
+
+    @media (max-width: 1577px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 50px;
+    }
+
+    @media (max-width: 1475px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 30px;
+    }
+
+    @media (max-width: 1403px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 10px;
+    }
+
+    @media (max-width: 1325px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 120px;
+    }
+    @media (max-width: 1237px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 70px;
+    }
+
+    @media (max-width: 1137px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 40px;
+    }
+
+    @media (max-width: 1069px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 10px;
+    }
+
+    @media (max-width: 1005px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 55px;
+    }
+
+    @media (max-width: 949px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 35px;
+    }
+
+    @media (max-width: 907px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 10px;
+    }
+
+    @media (max-width: 857px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 10px;
+    }
   }
 }
 
@@ -137,6 +209,46 @@ header {
   border-radius: 40px;
   margin-bottom: 30px;
   transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+  @media (max-width: 1005px) {
+    .sneakerImg {
+      width: 190px;
+    }
+    .price {
+      font-size: 13px;
+    }
+    .plus {
+      top: 3px;
+    }
+
+    padding: 25px;
+    width: 260px;
+  }
+
+  @media (max-width: 857px) {
+    .sneakerImg {
+      width: 160px;
+      margin-left: 10px;
+    }
+
+    .priceTitle {
+      font-size: 1px;
+    }
+
+    .price {
+      font-size: 12px;
+    }
+    .plus {
+      top: 3px;
+    }
+
+    h5 {
+      font-size: 8px;
+    }
+
+    padding: 25px;
+    width: 240px;
+  }
 
   .btnAddGroup {
     position: relative;
@@ -209,6 +321,12 @@ header {
     display: flex;
     margin-top: auto;
     justify-content: space-between;
+
+    @media (max-width: 857px) {
+      .priceTitle {
+        font-size: 13px;
+      }
+    }
   }
 
   .cardBottomInfo {

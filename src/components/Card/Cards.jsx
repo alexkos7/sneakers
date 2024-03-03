@@ -65,7 +65,7 @@ function Cards({ id, title, price, imageUrl, favorited = false }) {
       <div className="cardBottom">
         <div className="cardBottomInfo">
           <span className="priceTitle">Цена:</span>
-          <b>{price} rub.</b>
+          <b className="price">{price} rub.</b>
         </div>
         <div className="btnAddGroup">
           <button className="btnAddCart" onClick={onAddToCart}>
